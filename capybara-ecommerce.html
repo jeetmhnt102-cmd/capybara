@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPYBARA - Luxury Fashion & Accessories</title>
+    <meta name="description" content="Discover premium clothing, sneakers, and accessories at CAPYBARA. Luxury fashion with cash on delivery and UPI payment options.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a1a1a",
+                        secondary: "#d4af37",
+                        accent: "#8b4513",
+                        luxury: "#f8f4e6"
+                    },
+                    fontFamily: {
+                        'serif': ['Georgia', 'serif'],
+                        'display': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-luxury font-sans">
+    <!-- Header -->
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4">
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center py-3 border-b border-gray-700">
+                <div class="text-2xl font-display font-bold text-secondary">CAPYBARA</div>
+                
+                <div class="flex items-center space-x-6">
+                    <div class="hidden md:flex items-center space-x-4 text-sm">
+                        <span><i class="fas fa-phone-alt mr-2"></i>+91 98765 43210</span>
+                        <span><i class="fas fa-envelope mr-2"></i>orders@capybara.com</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="hover:text-secondary transition-colors">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="hover:text-secondary transition-colors">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="hover:text-secondary transition-colors relative">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="absolute -top-2 -right-2 bg-secondary text-primary text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="py-4">
+                <ul class="flex justify-center space-x-8 text-sm uppercase tracking-wider">
+                    <li><a href="#" class="hover:text-secondary transition-colors font-medium">New Arrivals</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors font-medium">Clothing</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors font-medium">Sneakers</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors font-medium">Accessories</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors font-medium">Collections</a></li>
+                    <li><a href="#" class="hover:text-secondary transition-colors font-medium">Sale</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-primary to-accent text-white">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-display font-bold mb-6">Elevate Your Style</h1>
+                <p class="text-xl mb-8 text-gray-200">Discover luxury clothing, premium sneakers, and exquisite accessories crafted for the modern connoisseur.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-secondary text-primary px-8 py-3 font-semibold hover:bg-yellow-600 transition-colors">Shop Now</button>
+                    <button class="border-2 border-white px-8 py-3 font-semibold hover:bg-white hover:text-primary transition-colors">View Collection</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-center mb-12">Featured Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Clothing -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <img src="https://picsum.photos/600/400?random=1" alt="Luxury clothing collection" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h3 class="text-2xl font-display font-bold mb-2">Clothing</h3>
+                            <p class="text-sm">Premium Apparel</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sneakers -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <img src="https://picsum.photos/600/400?random=2" alt="Premium sneakers collection" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h3 class="text-2xl font-display font-bold mb-2">Sneakers</h3>
+                            <p class="text-sm">Limited Editions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accessories -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <img src="https://picsum.photos/600/400?random=3" alt="Luxury accessories collection" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h3 class="text-2xl font-display font-bold mb-2">Accessories</h3>
+                            <p class="text-sm">Exclusive Pieces</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-luxury">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-center mb-12">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-center mb-12">Payment Options</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="text-center p-8 border-2 border-secondary rounded-lg">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4">Cash on Delivery</h3>
+                    <p class="text-gray-600">Pay when your order arrives at your doorstep. No upfront payment required.</p>
+                </div>
+                <div class="text-center p-8 border-2 border-secondary rounded-lg">
+                    <div class="text-4xl text-secondary mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4">UPI Payment</h3>
+                    <p class="text-gray-600">Quick and secure payments using any UPI app. Instant confirmation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-display font-bold mb-4">Join the CAPYBARA Club</h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Be the first to know about new collections, exclusive offers, and style inspiration.</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 text-primary rounded-l-lg focus:outline-none">
+                <button class="bg-secondary text-primary px-6 py-3 font-semibold rounded-r-lg hover:bg-yellow-600 transition-colors">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-display font-bold text-secondary mb-4">CAPYBARA</h3>
+                    <p class="text-gray-300 text-sm">Luxury fashion redefined. Premium clothing, sneakers, and accessories for the discerning individual.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-secondary transition-colors">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Clothing</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Sneakers</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-secondary transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Returns</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-phone mr-2"></i>+91 98765 43210</li>
+                        <li><i class="fas fa-envelope mr-2"></i>orders@capybara.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 CAPYBARA. All rights reserved. Luxury Fashion E-commerce.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-display font-bold" id="modalProductName">Product Name</h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img id="modalProductImage" src="" alt="" class="w-full rounded-lg" loading="lazy">
+                    </div>
+                    <div>
+                        <p id="modalProductDescription" class="text-gray-600 mb-4"></p>
+                        <p id="modalProductPrice" class="text-2xl font-bold text-secondary mb-6"></p>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Size</label>
+                            <select class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
+                                <option>Select Size</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
+                            <div class="flex items-center border border-gray-300 rounded-lg w-32">
+                                <button class="px-3 py-2 text-gray-600 hover:text-primary">-</button>
+                                <input type="number" value="1" min="1" class="w-12 text-center border-0 focus:outline-none">
+                                <button class="px-3 py-2 text-gray-600 hover:text-primary">+</button>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-secondary text-primary py-3 font-semibold rounded-lg hover:bg-yellow-600 transition-colors mb-4">Add to Cart</button>
+                        <button id="buyNowBtn" class="w-full border-2 border-primary text-primary py-3 font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-2xl font-display font-bold">Checkout</h3>
+                    <button id="closeCheckoutModal" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                
+                <form id="checkoutForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Shipping Address</label>
+                        <textarea required rows="3" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">City</label>
+                        <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Pincode</label>
+                            <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">State</label>
+                            <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-4">Payment Method</label>
+                        <div class="space-y-3">
+                            <label class="flex items-center">
+                                <input type="radio" name="payment" value="cod" checked class="mr-3 text-secondary focus:ring-secondary">
+                                <span>Cash on Delivery</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="payment" value="upi" class="mr-3 text-secondary focus:ring-secondary">
+                                <span>UPI Payment</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-secondary text-primary py-3 font-semibold rounded-lg hover:bg-yellow-600 transition-colors">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Product Data
+        const products = [
+            {
+                "id": 1,
+                "name": "Premium Cotton T-Shirt",
+                "category": "clothing",
+                "price": "₹2,499",
+                "originalPrice": "₹3,499",
+                "image": "https://picsum.photos/300/300?random=4",
+                "description": "Crafted from premium Egyptian cotton, this t-shirt offers exceptional comfort and durability with a luxurious feel."
+            },
+            {
+                "id": 2,
+                "name": "Designer Denim Jacket",
+                "category": "clothing",
+                "price": "₹8,999",
+                "originalPrice": "₹11,999",
+                "image": "https://picsum.photos/300/300?random=5",
+                "description": "Handcrafted denim jacket with premium finishes and attention to detail for a sophisticated urban look."
+            },
+            {
+                "id": 3,
+                "name": "Limited Edition Sneakers",
+                "category": "sneakers",
+                "price": "₹12,499",
+                "originalPrice": "₹15,999",
+                "image": "https://picsum.photos/300/300?random=6",
+                "description": "Exclusive limited edition sneakers featuring premium materials and innovative design for ultimate comfort."
+            },
+            {
+                "id": 4,
+                "name": "Leather Crossbody Bag",
+                "category": "accessories",
+                "price": "₹6,999",
+                "originalPrice": "₹8,999",
+                "image": "https://picsum.photos/300/300?random=7",
+                "description": "Handcrafted genuine leather crossbody bag with multiple compartments and premium hardware."
+            },
+            {
+                "id": 5,
+                "name": "Silk Blend Shirt",
+                "category": "clothing",
+                "price": "₹5,499",
+                "originalPrice": "₹6,999",
+                "image": "https://picsum.photos/300/300?random=8",
+                "description": "Luxurious silk-cotton blend shirt with a smooth finish and elegant drape for formal occasions."
+            },
+            {
+                "id": 6,
+                "name": "Premium Wool Sweater",
+                "category": "clothing",
+                "price": "₹7,999",
+                "originalPrice": "₹9,999",
+                "image": "https://picsum.photos/300/300?random=9",
+                "description": "100% merino wool sweater offering exceptional warmth and comfort with a sophisticated minimalist design."
+            },
+            {
+                "id": 7,
+                "name": "Urban Street Sneakers",
+                "category": "sneakers",
+                "price": "₹9,499",
+                "originalPrice": "₹12,499",
+                "image": "https://picsum.photos/300/300?random=10",
+                "description": "Contemporary street-style sneakers with advanced cushioning technology and durable construction."
+            },
+            {
+                "id": 8,
+                "name": "Leather Wallet",
+                "category": "accessories",
+                "price": "₹3,999",
+                "originalPrice": "₹4,999",
+                "image": "https://picsum.photos/300/300?random=11",
+                "description": "Slim genuine leather wallet with multiple card slots and RFID protection for modern convenience."
+            }
+        ];
+
+        // Cart functionality
+        let cart = [];
+
+        // Generate product cards
+        function generateProductCards() {
+            const container = document.querySelector('.grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-4');
+            container.innerHTML = '';
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-white rounded-lg shadow-lg overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300';
+                productCard.innerHTML = `
+                    <div class="relative overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <div class="absolute top-2 right-2 bg-secondary text-primary px-2 py-1 text-xs font-semibold rounded">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">${product.name}</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl font-bold text-secondary">${product.price}</span>
+                            <span class="text-sm text-gray-500 line-through">${product.originalPrice}</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="flex-1 bg-primary text-white py-2 rounded-lg hover:bg-gray-800 transition-colors add-to-cart" data-product='${JSON.stringify(product).replace(/"/g, "&quot;")}'>Add to Cart</button>
+                            <button class="flex-1 border border-primary text-primary py-2 rounded-lg hover:bg-primary hover:text-white transition-colors view-details" data-product='${JSON.stringify(product).replace(/"/g, "&quot;")}'>View</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(productCard);
+            });
+
+            // Add event listeners
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const product = JSON.parse(this.getAttribute('data-product').replace(/&quot;/g, '"'));
+                    addToCart(product);
+                });
+            });
+
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const product = JSON.parse(this.getAttribute('data-product').replace(/&quot;/g, '"'));
+                    openProductModal(product);
+                });
+            });
+        }
+
+        // Add to cart function
+        function addToCart(product) {
+            cart.push(product);
+            updateCartCount();
+            showNotification('Product added to cart!');
+        }
+
+        // Update cart count
+        function updateCartCount() {
+            const cartCount = document.querySelector('.absolute.-top-2.-right-2');
+            cartCount.textContent = cart.length;
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Open product modal
+        function openProductModal(product) {
+            document.getElementById('modalProductName').textContent = product.name;
+            document.getElementById('modalProductImage').src = product.image;
+            document.getElementById('modalProductImage').alt = product.name;
+            document.getElementById('modalProductDescription').textContent = product.description;
+            document.getElementById('modalProductPrice').textContent = product.price;
+            
+            document.getElementById('productModal').classList.remove('hidden');
+            document.getElementById('productModal').classList.add('flex');
+        }
+
+        // Close modals
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('productModal').classList.add('hidden');
+            document.getElementById('productModal').classList.remove('flex');
+        });
+
+        document.getElementById('closeCheckoutModal').addEventListener('click', function() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+            document.getElementById('checkoutModal').classList.remove('flex');
+        });
+
+        // Buy now button
+        document.getElementById('buyNowBtn').addEventListener('click', function() {
+            document.getElementById('productModal').classList.add('hidden');
+            document.getElementById('productModal').classList.remove('flex');
+            document.getElementById('checkoutModal').classList.remove('hidden');
+            document.getElementById('checkoutModal').classList.add('flex');
+        });
+
+        // Checkout form submission
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const orderData = {
+                name: formData.get('name') || this.querySelector('input[type="text"]').value,
+                email: formData.get('email') || this.querySelector('input[type="email"]').value,
+                phone: formData.get('phone') || this.querySelector('input[type="tel"]').value,
+                address: formData.get('address') || this.querySelector('textarea').value,
+                city: formData.get('city') || this.querySelectorAll('input[type="text"]')[3].value,
+                pincode: formData.get('pincode') || this.querySelectorAll('input[type="text"]')[4].value,
+                state: formData.get('state') || this.querySelectorAll('input[type="text"]')[5].value,
+                payment: formData.get('payment') || this.querySelector('input[name="payment"]:checked').value,
+                products: cart,
+                total: cart.reduce((sum, product) => sum + parseInt(product.price.replace(/[^0-9]/g, '')), 0),
+                orderDate: new Date().toLocaleString()
+            };
+
+            // Send email (simulated - in production, this would connect to a backend)
+            sendOrderEmail(orderData);
+            
+            // Show success message
+            showNotification('Order placed successfully! You will receive a confirmation email shortly.');
+            
+            // Close modal and reset cart
+            document.getElementById('checkoutModal').classList.add('hidden');
+            document.getElementById('checkoutModal').classList.remove('flex');
+            cart = [];
+            updateCartCount();
+            this.reset();
+        });
+
+        // Simulate email sending
+        function sendOrderEmail(orderData) {
+            console.log('Sending order details to orders@capybara.com');
+            console.log('Order Details:', orderData);
+            // In a real implementation, this would make an API call to your backend
+            // which would then send the email using a service like SendGrid, Mailgun, etc.
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            generateProductCards();
+            updateCartCount();
+            
+            // Close modals when clicking outside
+            document.getElementById('productModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.add('hidden');
+                    this.classList.remove('flex');
+                }
+            });
+            
+            document.getElementById('checkoutModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.add('hidden');
+                    this.classList.remove('flex');
+                }
+            });
+        });
+
+        // Navigation prevention
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
